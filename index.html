@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Laboratorio de Hardware - Unidad 1</title>
+</head>
+<body>
+
+<section>
+  <h1>Laboratorio de Hardware</h1>
+  <h2>Unidad 1: Organización básica del CPU</h2>
+
+  <h2>1. Análisis de la Unidad de Control (Analogía de la Orquesta)</h2>
+  <p>
+    La <strong>Unidad de Control</strong> funciona como el director de una orquesta. Es quien coordina a todos los componentes del CPU, indicando cuándo deben actuar y cómo hacerlo. La <strong>ALU</strong> sería como los músicos que ejecutan las acciones, mientras que los datos serían la partitura.
+  </p>
+  <p>
+    Si la Unidad de Control falla en la sincronización, aunque la <strong>ALU</strong> funcione perfectamente, todo el sistema se desorganiza. Las instrucciones se ejecutarían en momentos incorrectos, los datos circularían mal por los <strong>Buses</strong> y el <strong>Reloj</strong> no lograría mantener el orden. El resultado sería errores o directamente que el sistema deje de funcionar correctamente.
+  </p>
+
+  <h2>2. Jerarquía de Ejecución</h2>
+  <p>
+    El procesador utiliza los <strong>Registros</strong> porque están dentro del CPU y permiten acceder a los datos de forma casi inmediata. En cambio, acceder a la memoria RAM implica más tiempo, ya que los datos deben viajar a través de los <strong>Buses</strong>.
+  </p>
+  <p>
+    Esto influye directamente en la velocidad del código: mientras más datos se trabajen en registros, más rápido se ejecutan las instrucciones. Si el procesador tuviera que buscar cada dato en la RAM, el rendimiento sería mucho más lento.
+  </p>
+
+  <h2>3. Lógica de Decisión en la ALU</h2>
+  <p>
+    Cuando escribimos una condición como <strong>if (x &gt; 10)</strong>, la <strong>ALU</strong> realiza la comparación. Internamente, toma el valor de x y lo compara con 10 mediante operaciones matemáticas.
+  </p>
+  <p>
+    Generalmente, la ALU hace una resta entre los valores y analiza el resultado. Dependiendo de si el resultado es positivo, negativo o cero, se determina si la condición es verdadera o falsa. Luego, la <strong>Unidad de Control</strong> usa ese resultado para decidir qué instrucción ejecutar después.
+  </p>
+
+  <h2>4. Etapas del Ciclo de Instrucción</h2>
+  <ul>
+    <li><strong>Fetch:</strong> El CPU busca la instrucción en la memoria RAM usando los <strong>Buses</strong> y la guarda en un registro.</li>
+    <li><strong>Decode:</strong> La <strong>Unidad de Control</strong> interpreta la instrucción y determina qué se debe hacer.</li>
+    <li><strong>Execute:</strong> La <strong>ALU</strong> o otros componentes ejecutan la acción, como cálculos o movimientos de datos.</li>
+  </ul>
+
+</section>
+
+</body>
+</html>
